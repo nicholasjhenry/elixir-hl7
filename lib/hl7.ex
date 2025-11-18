@@ -596,7 +596,7 @@ defmodule HL7 do
   end
 
   defp list_has_only_empty_strings?(list) do
-    Enum.all?(list, &(to_map(&1) == ""))
+    Enum.all?(list, &(&1 == ""))
   end
 
   defp do_to_list(hl7_map_data) when is_binary(hl7_map_data) do
